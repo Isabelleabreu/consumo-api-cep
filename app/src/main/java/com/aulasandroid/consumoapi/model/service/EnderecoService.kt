@@ -9,9 +9,11 @@ interface EnderecoService {
 
     //essa função espera o retorno de um endereço
     @GET("{cep}/json/")
-    fun getEnderecoByCep(@Path("cep") cep: String ): Call<Endereco>
+    fun getEnderecoByCep(
+        @Path("cep") cep: String )
+    : Call<Endereco>
 
-    @GET("{uf}/{cidade}/{rua}/json/")
+    @GET("{uf}/{cidade}/{rua/json/")
     fun getEnderecosByUfCidadeRua(
         @Path("uf") uf: String,
         @Path("cidade") cidade: String,
